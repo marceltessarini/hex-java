@@ -1,4 +1,4 @@
-package br.com.hexagonal.hexagonal;
+package br.com.hexagonal.demohexa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
