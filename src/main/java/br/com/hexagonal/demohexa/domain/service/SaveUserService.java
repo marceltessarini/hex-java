@@ -19,7 +19,7 @@ public class SaveUserService {
 		
 		user.setCpf(saveUserDto.cpf());
 		user.setName(saveUserDto.name());
-		user.setStatus(UserStatus.INACTIVE);
+		user.setStatus(UserStatus.PENDING_RATING);
 		
 		return userRepo.save(user);
 	}

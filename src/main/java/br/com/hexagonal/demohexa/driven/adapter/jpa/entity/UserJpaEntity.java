@@ -29,6 +29,9 @@ public class UserJpaEntity {
 	@NotNull
 	private String cpf;
 	
+	@Column(nullable = true)
+	private Integer rate;
+	
     @NotNull
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
@@ -64,5 +67,13 @@ public class UserJpaEntity {
 
 	public void setStatus(UserStatus status) {
 		this.status = status;
+	}
+
+	public Integer getRate() {
+		return rate;
+	}
+
+	public void setRate(Integer rate) {
+		this.rate = rate;
 	}
 }

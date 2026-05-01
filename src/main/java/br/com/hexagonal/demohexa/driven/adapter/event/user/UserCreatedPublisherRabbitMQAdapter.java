@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import br.com.hexagonal.demohexa.application.port.output.UserCreatedPublisherPort;
-import br.com.hexagonal.demohexa.config.rabbitmq.AproveUserRabbitConfig;
+import br.com.hexagonal.demohexa.config.rabbitmq.RatingUserRabbitConfig;
 import br.com.hexagonal.demohexa.domain.model.User;
 import br.com.hexagonal.demohexa.driven.adapter.event.user.message.ApproveUserMessage;
 
@@ -24,8 +24,8 @@ public class UserCreatedPublisherRabbitMQAdapter implements UserCreatedPublisher
 	public void publish(User user) {
 		logger.info("Publishing user created event.");
 		var approveUserMessage = new ApproveUserMessage(user.getId(), user.getName(), user.getCpf());
-		rabbitTemplate.convertAndSend(AproveUserRabbitConfig.APPROVE_USER_EXCHANGE,
-				AproveUserRabbitConfig.ROUTING_KEY_APPROVE_USER, approveUserMessage);
+		rabbitTemplate.convertAndSend(RatingUserRabbitConfig.RATING_USER_EXCHANGE,
+				RatingUserRabbitConfig.ROUTING_KEY_RATING_USER, approveUserMessage);
 	}
 
 }

@@ -19,16 +19,17 @@ public class UserRepoJpaAdapter implements UserRepoPort {
 		userEntity.setCpf(user.getCpf());
 		userEntity.setName(user.getName());
 		userEntity.setStatus(user.getStatus());
-		userEntity.setId(user.getId());
-		
+		userEntity.setRate(user.getRate());		
+
 		var saved = this.jpaRepository.save(userEntity);
 		
 		var savedUser = new User();
 		
-		savedUser.setCpf(saved.getCpf());
 		savedUser.setId(saved.getId());
+		savedUser.setCpf(saved.getCpf());
 		savedUser.setName(saved.getName());
 		savedUser.setStatus(saved.getStatus());
+		savedUser.setRate(saved.getRate());
 		
 		return savedUser;
 	}

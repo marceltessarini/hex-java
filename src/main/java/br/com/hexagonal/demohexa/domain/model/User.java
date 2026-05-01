@@ -6,6 +6,7 @@ public class User {
 	private UUID id;
 	private String name;
 	private String cpf;
+	private Integer rate;
 	private UserStatus status;
 
 	public UUID getId() {
@@ -38,5 +39,13 @@ public class User {
 
 	public void setStatus(UserStatus status) {
 		this.status = status;
+	}
+	
+	public Integer getRate() {
+		return rate;
+	}
+
+	public void setRate(Integer rate) {
+		this.rate = rate;
 	}
 }
