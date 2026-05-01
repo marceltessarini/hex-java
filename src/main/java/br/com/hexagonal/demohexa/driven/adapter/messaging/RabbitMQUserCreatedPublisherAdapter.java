@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import br.com.hexagonal.demohexa.application.port.output.UserCreatedPublisherPort;
+import br.com.hexagonal.demohexa.config.rabbitmq.AproveUserRabbitConfig;
 import br.com.hexagonal.demohexa.domain.model.User;
 
 @Component
@@ -15,7 +16,7 @@ public class RabbitMQUserCreatedPublisherAdapter implements UserCreatedPublisher
 
 	@Override
 	public void publish(User user) {
-//		rabbitTemplate.convertAndSend("my-exchange", "routing.key.test", msg);
+		rabbitTemplate.convertAndSend(AproveUserRabbitConfig.APPROVE_USER_EXCHANGE, AproveUserRabbitConfig.ROUTING_KEY_APPROVE_USER, user);
 	}
 
 }

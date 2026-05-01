@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class AproveUserRabbitConfig {
 	public static final String APPROVE_USER_EXCHANGE = "approve-user-exchange";
 	public static final String APPROVE_USER_QUEUE = "approve-user-queue";
+	public static final String ROUTING_KEY_APPROVE_USER = "routing.key.approve.user";
 
 	@Bean
 	public Queue approveUserQueue() {
@@ -24,6 +25,6 @@ public class AproveUserRabbitConfig {
 
 	@Bean
 	public Binding bindingApproveUserQueue(Queue queue, TopicExchange exchange) {
-		return BindingBuilder.bind(queue).to(exchange).with("routing.key.approve.user");
+		return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY_APPROVE_USER);
 	}
 }
