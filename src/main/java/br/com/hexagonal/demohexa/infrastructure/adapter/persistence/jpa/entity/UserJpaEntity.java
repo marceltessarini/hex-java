@@ -1,4 +1,4 @@
-package br.com.hexagonal.demohexa.out.adapter.persistence.jpa.entity;
+package br.com.hexagonal.demohexa.infrastructure.adapter.persistence.jpa.entity;
 
 import java.util.UUID;
 
