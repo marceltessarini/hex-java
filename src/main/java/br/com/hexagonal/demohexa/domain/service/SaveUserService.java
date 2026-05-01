@@ -6,14 +6,13 @@ import org.springframework.stereotype.Service;
 import br.com.hexagonal.demohexa.domain.dto.SaveUserDto;
 import br.com.hexagonal.demohexa.domain.model.User;
 import br.com.hexagonal.demohexa.domain.model.UserStatus;
-import br.com.hexagonal.demohexa.domain.port.UserRepo;
-import br.com.hexagonal.demohexa.driven.adapter.jpa.entity.UserJpaEntity;
+import br.com.hexagonal.demohexa.domain.port.UserRepoPort;
 
 @Service
 public class SaveUserService {
 	
 	@Autowired
-	private UserRepo userRepo;
+	private UserRepoPort userRepo;
 
 	public User save(SaveUserDto saveUserDto) {
 		var user = new User();
