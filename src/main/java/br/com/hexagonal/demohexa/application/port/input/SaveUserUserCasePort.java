@@ -4,5 +4,5 @@ import br.com.hexagonal.demohexa.domain.dto.SaveUserDto;
 import br.com.hexagonal.demohexa.domain.model.User;
 
 public interface SaveUserUserCasePort {
-	public User saveUser(SaveUserDto saveUserDto);
+	public User execute(SaveUserDto saveUserDto);
 }

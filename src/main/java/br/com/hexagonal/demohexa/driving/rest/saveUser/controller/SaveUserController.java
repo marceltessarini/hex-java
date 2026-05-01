@@ -21,7 +21,7 @@ public class SaveUserController {
 	public ResponseEntity<SaveUserResponse> save(@RequestBody SaveUserRequest request) {
 		var saveUserDto = new SaveUserDto(request.getName(), request.getCpf());
 		
-		var savedUser = this.saveUserUserCase.saveUser(saveUserDto);
+		var savedUser = this.saveUserUserCase.execute(saveUserDto);
 		
 		var response = new SaveUserResponse();
 		response.setId(savedUser.getId());
