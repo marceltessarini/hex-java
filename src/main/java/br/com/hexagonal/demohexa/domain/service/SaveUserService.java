@@ -6,7 +6,7 @@ import br.com.hexagonal.demohexa.domain.dto.SaveUserDto;
 import br.com.hexagonal.demohexa.domain.model.User;
 import br.com.hexagonal.demohexa.driven.adapter.jpa.entity.UserJpaEntity;
 
-@Service()
+@Service
 public class SaveUserService {
 
 	public User saveUser(SaveUserDto saveUserDto) {

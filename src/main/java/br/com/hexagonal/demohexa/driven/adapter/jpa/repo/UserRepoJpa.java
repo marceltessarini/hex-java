@@ -1,20 +1,16 @@
 package br.com.hexagonal.demohexa.driven.adapter.jpa.repo;
 
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import br.com.hexagonal.demohexa.domain.model.User;
 import br.com.hexagonal.demohexa.domain.port.UserRepo;
-import br.com.hexagonal.demohexa.driven.adapter.jpa.entity.UserJpaEntity;
 
-@Repository()
+@Component
 public class UserRepoJpa implements UserRepo {
     @Autowired 
-    private  JpaRepository <UserJpaEntity, UUID> jpaRepository; 
-    
+    private  UserRepoSpringData jpaRepository; 
+        
 	@Override
 	public User save(User user) {
 //		return this.jpaRepository.save(user);

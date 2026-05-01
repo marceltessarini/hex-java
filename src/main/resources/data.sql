@@ -1,0 +1,2 @@
+insert into users (id, name, cpf, status) values ('74566ee7-cb93-4548-8b59-294c810539ba', 'Pedro Silva', '12345714708', 'ACTIVE');
+insert into users (id, name, cpf, status) values ('c7441003-0834-4a34-9781-93188bd1fa71', 'Leandro Pedro', '78745714708', 'INACTIVE');
