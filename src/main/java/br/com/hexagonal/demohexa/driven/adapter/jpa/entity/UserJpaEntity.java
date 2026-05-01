@@ -2,7 +2,7 @@ package br.com.hexagonal.demohexa.driven.adapter.jpa.entity;
 
 import java.util.UUID;
 
-import br.com.hexagonal.demohexa.domain.model.UserStatus;
+import br.com.hexagonal.demohexa.core.domain.model.UserStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

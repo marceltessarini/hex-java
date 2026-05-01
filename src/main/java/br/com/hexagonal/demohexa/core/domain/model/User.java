@@ -1,4 +1,4 @@
-package br.com.hexagonal.demohexa.domain.model;
+package br.com.hexagonal.demohexa.core.domain.model;
 
 import java.util.UUID;
 

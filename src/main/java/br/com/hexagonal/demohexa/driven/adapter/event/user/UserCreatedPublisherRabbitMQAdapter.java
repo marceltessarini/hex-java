@@ -4,9 +4,9 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import br.com.hexagonal.demohexa.application.port.output.UserCreatedPublisherPort;
 import br.com.hexagonal.demohexa.config.rabbitmq.RatingUserRabbitConfig;
-import br.com.hexagonal.demohexa.domain.model.User;
+import br.com.hexagonal.demohexa.core.application.port.output.UserCreatedPublisherPort;
+import br.com.hexagonal.demohexa.core.domain.model.User;
 import br.com.hexagonal.demohexa.driven.adapter.event.user.message.ApproveUserMessage;
 
 import org.slf4j.Logger;

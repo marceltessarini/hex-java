@@ -3,8 +3,8 @@ package br.com.hexagonal.demohexa.driven.adapter.jpa.repo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import br.com.hexagonal.demohexa.domain.model.User;
-import br.com.hexagonal.demohexa.domain.port.UserRepoPort;
+import br.com.hexagonal.demohexa.core.domain.model.User;
+import br.com.hexagonal.demohexa.core.domain.port.UserRepoPort;
 import br.com.hexagonal.demohexa.driven.adapter.jpa.entity.UserJpaEntity;
 
 @Component
