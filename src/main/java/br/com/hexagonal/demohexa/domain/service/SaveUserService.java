@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.hexagonal.demohexa.domain.dto.SaveUserDto;
 import br.com.hexagonal.demohexa.domain.model.User;
-import br.com.hexagonal.demohexa.infrastructure.adapter.persistence.jpa.entity.UserJpaEntity;
+import br.com.hexagonal.demohexa.driven.adapter.jpa.entity.UserJpaEntity;
 
 @Service()
 public class SaveUserService {
