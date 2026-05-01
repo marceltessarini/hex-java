@@ -8,7 +8,7 @@ import br.com.hexagonal.demohexa.domain.port.UserRepoPort;
 import br.com.hexagonal.demohexa.driven.adapter.jpa.entity.UserJpaEntity;
 
 @Component
-public class UserRepoJpa implements UserRepoPort {
+public class JpaUserRepoAdapter implements UserRepoPort {
     @Autowired 
     private  UserRepoSpringData jpaRepository; 
         
