@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.hexagonal.demohexa.application.port.input.SaveUserUserCasePort;
+import br.com.hexagonal.demohexa.application.port.input.SaveUserUseCasePort;
 import br.com.hexagonal.demohexa.domain.dto.SaveUserDto;
 import br.com.hexagonal.demohexa.driving.rest.saveUser.data.SaveUserRequest;
 import br.com.hexagonal.demohexa.driving.rest.saveUser.data.SaveUserResponse;
@@ -15,7 +15,7 @@ import br.com.hexagonal.demohexa.driving.rest.saveUser.data.SaveUserResponse;
 @RestController
 public class SaveUserController {
 	@Autowired
-	private SaveUserUserCasePort saveUserUserCase;
+	private SaveUserUseCasePort saveUserUserCase;
 	
 	@PostMapping("/users")
 	public ResponseEntity<SaveUserResponse> save(@RequestBody SaveUserRequest request) {
