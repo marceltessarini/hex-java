@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/weather",
+    "queryParameters": { "city": { "equalTo": "Campinas" } }
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"city\": \"Campinas\", \"condition\": \"STORM\", \"temp\": 22 }",
+    "fixedDelayMilliseconds": 5000,
+    "headers": { "Content-Type": "application/json" }
+  }
+}

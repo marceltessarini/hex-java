@@ -1,1 +1,7 @@
-services: {}
+services:
+  wiremock:
+    image: wiremock/wiremock:latest
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./src/main/resources/static/wiremock:/home/wiremock
